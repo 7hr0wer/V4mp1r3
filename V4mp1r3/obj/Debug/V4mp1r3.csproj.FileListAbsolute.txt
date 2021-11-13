@@ -1,0 +1,16 @@
+C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\bin\Debug\V4mp1r3.exe.config
+C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\bin\Debug\V4mp1r3.exe
+C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\bin\Debug\V4mp1r3.pdb
+C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.Properties.Resources.resources
+C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.exe
+C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.pdb
+C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.frmMain.resources
+C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.frmCMD.resources
+C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.frmListenerSettings.resources
+C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.frmServerMaker.resources
+C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.csproj.SuggestedBindingRedirects.cache
+C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.frmAuthor.resources
+C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.frmV4mp1r3.resources
