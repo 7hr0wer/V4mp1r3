@@ -61,6 +61,18 @@
     <Compile Include="frmCMD.Designer.cs">
       <DependentUpon>frmCMD.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDownloadAndRun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDownloadAndRun.Designer.cs">
+      <DependentUpon>frmDownloadAndRun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProccessManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProccessManage.Designer.cs">
+      <DependentUpon>frmProccessManage.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListenerSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +104,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCMD.resx">
       <DependentUpon>frmCMD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDownloadAndRun.resx">
+      <DependentUpon>frmDownloadAndRun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProccessManage.resx">
+      <DependentUpon>frmProccessManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListenerSettings.resx">
       <DependentUpon>frmListenerSettings.cs</DependentUpon>

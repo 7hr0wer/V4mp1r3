@@ -14,3 +14,5 @@ C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.frmServerM
 C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.csproj.SuggestedBindingRedirects.cache
 C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.frmAuthor.resources
 C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.frmV4mp1r3.resources
+C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.frmDownloadAndRun.resources
+C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.frmProccessManage.resources

