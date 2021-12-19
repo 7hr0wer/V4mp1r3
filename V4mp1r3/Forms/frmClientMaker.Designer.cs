@@ -1,7 +1,7 @@
 ﻿
 namespace V4mp1r3
 {
-    partial class frmServerMaker
+    partial class frmClientMaker
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace V4mp1r3
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmServerMaker));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmClientMaker));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -85,7 +85,7 @@ namespace V4mp1r3
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // frmServerMaker
+            // frmCLientMaker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -98,8 +98,8 @@ namespace V4mp1r3
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "frmServerMaker";
-            this.Text = "服务端生成设置";
+            this.Name = "frmCLientMaker";
+            this.Text = "客户端生成设置";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -49,79 +49,88 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAuthor.cs">
+    <Compile Include="Forms\frmAuthor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAuthor.Designer.cs">
+    <Compile Include="Forms\frmAuthor.Designer.cs">
       <DependentUpon>frmAuthor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCMD.cs">
+    <Compile Include="Forms\frmCMD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCMD.Designer.cs">
+    <Compile Include="Forms\frmCMD.Designer.cs">
       <DependentUpon>frmCMD.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDownloadAndRun.cs">
+    <Compile Include="Forms\frmDownloadAndRun.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDownloadAndRun.Designer.cs">
+    <Compile Include="Forms\frmDownloadAndRun.Designer.cs">
       <DependentUpon>frmDownloadAndRun.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProccessManage.cs">
+    <Compile Include="Forms\frmProccessManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProccessManage.Designer.cs">
+    <Compile Include="Forms\frmProccessManage.Designer.cs">
       <DependentUpon>frmProccessManage.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmListenerSettings.cs">
+    <Compile Include="Forms\frmListenerSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmListenerSettings.Designer.cs">
+    <Compile Include="Forms\frmListenerSettings.Designer.cs">
       <DependentUpon>frmListenerSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
+    <Compile Include="Forms\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
+    <Compile Include="Forms\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmServerMaker.cs">
+    <Compile Include="Forms\frmClientMaker.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmServerMaker.Designer.cs">
-      <DependentUpon>frmServerMaker.cs</DependentUpon>
+    <Compile Include="Forms\frmClientMaker.Designer.cs">
+      <DependentUpon>frmClientMaker.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmV4mp1r3.cs">
+    <Compile Include="Forms\frmV4mp1r3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmV4mp1r3.Designer.cs">
+    <Compile Include="Forms\frmV4mp1r3.Designer.cs">
       <DependentUpon>frmV4mp1r3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSreenMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSreenMonitor.Designer.cs">
+      <DependentUpon>frmSreenMonitor.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAuthor.resx">
+    <EmbeddedResource Include="Forms\frmAuthor.resx">
       <DependentUpon>frmAuthor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCMD.resx">
+    <EmbeddedResource Include="Forms\frmCMD.resx">
       <DependentUpon>frmCMD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDownloadAndRun.resx">
+    <EmbeddedResource Include="Forms\frmDownloadAndRun.resx">
       <DependentUpon>frmDownloadAndRun.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProccessManage.resx">
+    <EmbeddedResource Include="Forms\frmProccessManage.resx">
       <DependentUpon>frmProccessManage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListenerSettings.resx">
+    <EmbeddedResource Include="Forms\frmListenerSettings.resx">
       <DependentUpon>frmListenerSettings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
+    <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmServerMaker.resx">
-      <DependentUpon>frmServerMaker.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmClientMaker.resx">
+      <DependentUpon>frmClientMaker.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmV4mp1r3.resx">
+    <EmbeddedResource Include="Forms\frmV4mp1r3.resx">
       <DependentUpon>frmV4mp1r3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSreenMonitor.resx">
+      <DependentUpon>frmSreenMonitor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -131,6 +140,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -148,5 +158,6 @@
   <ItemGroup>
     <Content Include="V4mp1r3.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

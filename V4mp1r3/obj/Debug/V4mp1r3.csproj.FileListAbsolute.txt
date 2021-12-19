@@ -10,9 +10,10 @@ C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.pdb
 C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.frmMain.resources
 C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.frmCMD.resources
 C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.frmListenerSettings.resources
-C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.frmServerMaker.resources
 C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.csproj.SuggestedBindingRedirects.cache
 C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.frmAuthor.resources
 C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.frmV4mp1r3.resources
 C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.frmDownloadAndRun.resources
 C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.frmProccessManage.resources
+C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.frmClientMaker.resources
+C:\Users\Administrator\source\repos\V4mp1r3\V4mp1r3\obj\Debug\V4mp1r3.frmSreenMonitor.resources

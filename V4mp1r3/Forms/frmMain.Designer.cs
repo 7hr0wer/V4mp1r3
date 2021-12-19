@@ -45,11 +45,12 @@ namespace V4mp1r3
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.远程终端ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.服务端管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.断开连接ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.客户端管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.卸载ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.文件下载执行ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.进程管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.屏幕监控ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -153,11 +154,12 @@ namespace V4mp1r3
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.远程终端ToolStripMenuItem,
-            this.服务端管理ToolStripMenuItem,
+            this.客户端管理ToolStripMenuItem,
             this.文件下载执行ToolStripMenuItem,
-            this.进程管理ToolStripMenuItem});
+            this.进程管理ToolStripMenuItem,
+            this.屏幕监控ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(149, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(149, 114);
             // 
             // 远程终端ToolStripMenuItem
             // 
@@ -166,26 +168,26 @@ namespace V4mp1r3
             this.远程终端ToolStripMenuItem.Text = "远程终端";
             this.远程终端ToolStripMenuItem.Click += new System.EventHandler(this.远程终端ToolStripMenuItem_Click);
             // 
-            // 服务端管理ToolStripMenuItem
+            // 客户端管理ToolStripMenuItem
             // 
-            this.服务端管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.断开连接ToolStripMenuItem,
+            this.客户端管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.退出ToolStripMenuItem,
             this.卸载ToolStripMenuItem});
-            this.服务端管理ToolStripMenuItem.Name = "服务端管理ToolStripMenuItem";
-            this.服务端管理ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.服务端管理ToolStripMenuItem.Text = "服务端管理";
+            this.客户端管理ToolStripMenuItem.Name = "客户端管理ToolStripMenuItem";
+            this.客户端管理ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.客户端管理ToolStripMenuItem.Text = "客户端管理";
             // 
-            // 断开连接ToolStripMenuItem
+            // 退出ToolStripMenuItem
             // 
-            this.断开连接ToolStripMenuItem.Name = "断开连接ToolStripMenuItem";
-            this.断开连接ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.断开连接ToolStripMenuItem.Text = "断开连接";
-            this.断开连接ToolStripMenuItem.Click += new System.EventHandler(this.断开连接ToolStripMenuItem_Click);
+            this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.退出ToolStripMenuItem.Text = "退出";
+            this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
             // 卸载ToolStripMenuItem
             // 
             this.卸载ToolStripMenuItem.Name = "卸载ToolStripMenuItem";
-            this.卸载ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.卸载ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.卸载ToolStripMenuItem.Text = "卸载";
             this.卸载ToolStripMenuItem.Click += new System.EventHandler(this.卸载ToolStripMenuItem_Click);
             // 
@@ -203,6 +205,13 @@ namespace V4mp1r3
             this.进程管理ToolStripMenuItem.Text = "进程管理";
             this.进程管理ToolStripMenuItem.Click += new System.EventHandler(this.进程管理ToolStripMenuItem_Click);
             // 
+            // 屏幕监控ToolStripMenuItem
+            // 
+            this.屏幕监控ToolStripMenuItem.Name = "屏幕监控ToolStripMenuItem";
+            this.屏幕监控ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.屏幕监控ToolStripMenuItem.Text = "屏幕监控";
+            this.屏幕监控ToolStripMenuItem.Click += new System.EventHandler(this.屏幕监控ToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -215,7 +224,7 @@ namespace V4mp1r3
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "frmMain";
-            this.Text = "V4mp1r3 V0.2 测试版[20211127]";
+            this.Text = "V4mp1r3 V0.3 测试版[20211219]";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -240,12 +249,13 @@ namespace V4mp1r3
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 远程终端ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 服务端管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 断开连接ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 客户端管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 卸载ToolStripMenuItem;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ToolStripMenuItem 文件下载执行ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 进程管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 屏幕监控ToolStripMenuItem;
     }
 }
 

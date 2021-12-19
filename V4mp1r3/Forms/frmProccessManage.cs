@@ -35,6 +35,7 @@ namespace V4mp1r3
             button2.Enabled = false;
             try
             {
+                listView1.Items.Clear();
                 this.Text = "加载中......";
                 NetworkStream clientStream = client.GetStream();
                 BinaryWriter bw = new BinaryWriter(clientStream);

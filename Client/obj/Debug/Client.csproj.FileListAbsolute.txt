@@ -1,0 +1,8 @@
+C:\Users\Administrator\source\repos\V4mp1r3\Client\bin\Debug\Client.exe.config
+C:\Users\Administrator\source\repos\V4mp1r3\Client\bin\Debug\Client.exe
+C:\Users\Administrator\source\repos\V4mp1r3\Client\bin\Debug\Client.pdb
+C:\Users\Administrator\source\repos\V4mp1r3\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\V4mp1r3\Client\obj\Debug\Client.csproj.SuggestedBindingRedirects.cache
+C:\Users\Administrator\source\repos\V4mp1r3\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\V4mp1r3\Client\obj\Debug\Client.exe
+C:\Users\Administrator\source\repos\V4mp1r3\Client\obj\Debug\Client.pdb

@@ -31,16 +31,18 @@ namespace V4mp1r3
         {
             try
             {
+                button1.Enabled = false;
                 NetworkStream clientStream = client.GetStream();
                 BinaryWriter bw = new BinaryWriter(clientStream);
                 bw.Write(textBox1.Text);
-                string receive = null;
                 BinaryReader br = new BinaryReader(clientStream);
-                receive = br.ReadString();
+                string receive = br.ReadString();
                 richTextBox1.Text = receive;
+                button1.Enabled = true;
             }
             catch
             {
+                button1.Enabled = true;
                 MessageBox.Show("远程已主机断开连接！", "提示");
             }
         }
